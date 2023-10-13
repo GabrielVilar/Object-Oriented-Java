@@ -3,18 +3,13 @@ import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 public class Calculator {
-    int number01, number02, add, sub, sqr_root_sm;
+    float number01, number02, add, sub, div;
 
     DecimalFormat df = new DecimalFormat();
     
-
     public void receive_data(){
-        number01 = Integer.parseInt(JOptionPane.showInputDialog("Input the first number: "));
-        number02 = Integer.parseInt(JOptionPane.showInputDialog("Input the second number:"));
-
-        if(number01 < 0 && number02 < 0){
-            JOptionPane.showMessageDialog(null,"Negative values aren't allowed! Try again!");
-        }
+        number01 = Float.parseFloat(JOptionPane.showInputDialog("Input the first number: "));
+        number02 = Float.parseFloat(JOptionPane.showInputDialog("Input the second number: "));
     }
 
     public void addition(){
@@ -25,14 +20,29 @@ public class Calculator {
         sub = (number01 - number02);
     }
 
-    public void square_root_sum(){
-        sqr_root_sm = (int)(Math.sqrt(number01) + Math.sqrt(number02));
+    public void division(){
+        div = ((number01) / (number02));
     }
 
     public void show_result_add(){
         df.applyPattern("#,##0.00");
-        System.out.println("-----------------\nCalculator history\nNumber 01: "+df.format(number01)+
-        "\nNumber 02: "+ df.format(number02)+"\nSum: "+ df.format(add)+"\n-----------------");
+        JOptionPane.showMessageDialog(null,
+        "Calculator\nFirst number: "+df.format(number01)+"\nSecond number: "+df.format(number02)+
+        "\nSum ("+df.format(number01)+") + ("+df.format(number02)+") = "+df.format(add));
+    }
+
+    public void show_result_sub(){
+        df.applyPattern("#,##0.00");
+        JOptionPane.showMessageDialog(null,
+        "Calculator\nFirst number: "+df.format(number01)+"\nSecond number: "+df.format(number02)+
+        "\nSub ("+df.format(number01)+") - ("+df.format(number02)+") = "+df.format(sub));
+    }
+
+    public void show_result_division(){
+        df.applyPattern("#,##0.00");
+        JOptionPane.showMessageDialog(null,
+        "Calculator\nFirst number: "+df.format(number01)+"\nSecond number: "+df.format(number02)+
+        "\nDivision ("+df.format(number01)+") / ("+df.format(number02)+") = "+df.format(div));
     }
 
 }
