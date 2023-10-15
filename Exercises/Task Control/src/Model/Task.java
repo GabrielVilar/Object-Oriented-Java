@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Scanner;
+
 public class Task {
 
     private String name;
@@ -7,7 +9,7 @@ public class Task {
     private String description;
     private String completionDate;
     private float priorityNumber;
-    private double completedPercentage;
+    private float completedPercentage;
     
     public String getName() {
         return name;
@@ -39,17 +41,17 @@ public class Task {
     public void setPriorityNumber(float priorityNumber) {
         this.priorityNumber = priorityNumber;
     }
-    public double getCompletedPercentage() {
+    public float getCompletedPercentage() {
         return completedPercentage;
     }
-    public void setCompletedPercentage(double completedPercentage) {
+    public void setCompletedPercentage(float completedPercentage) {
         this.completedPercentage = completedPercentage;
     }
 
     public Task(){}
 
     public Task(String name, String deadline, String description, String completionDate, float priorityNumber,
-            double completedPercentage) {
+            float completedPercentage) {
         this.name = name;
         this.deadline = deadline;
         this.description = description;
@@ -58,8 +60,33 @@ public class Task {
         this.completedPercentage = completedPercentage;
     }
 
-    
-    
+    public void register(){
+        
+        System.out.println("Let's register a task");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Whats the name of the text? ");
+        setName(sc.nextLine());
+        System.out.println("Input a tesk description: ");
+        setDescription(sc.nextLine());
+        System.out.println("When is the task deadline? ");
+        setDeadline(sc.nextLine());
+        System.out.println("What's the task priority in a scale of 1 to 10? ");
+        setPriorityNumber(sc.nextFloat());
+        System.out.println("How much of the task is completed in percentage? ");
+        setCompletedPercentage(sc.nextFloat());
+        
+        if (getCompletedPercentage() == 100.0) {
+            System.out.println("When did you finish the task? ");
+            setCompletionDate(sc.nextLine());
+        }else{
+            setCompletionDate("--");
+        }
+    }
+
+    public void edit(){
+
+    }
+
     public String toString(){
         return "Task Control"
               +"\nName of the task: "+getName()
