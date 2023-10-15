@@ -8,7 +8,7 @@ public class TestCalculator {
 
         while (loop) {
             op = Integer.parseInt(JOptionPane.showInputDialog(
-                "Input the operation:\n(1) Sum\n(2) Sub\n(3) Division\n" +
+                "Input the operation:\n(1) Sum\n(2) Sub\n(3) Division\n(4) Multiplication\n" +
                 "(To exit press 'calcel' os the 'X' button)"));
             switch (op) {
                 case 1:
@@ -34,6 +34,11 @@ public class TestCalculator {
                         cal.division();
                         cal.show_result_division();
                     }                    
+                    break;
+                case 4:
+                    cal.receive_data();
+                    cal.multiplication();
+                    cal.show_result_mult();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null,"This option does not exist, Try again!");
