@@ -3,8 +3,8 @@ public class Accessories extends Luggage_Item{
     private String type;
     private String corporal_region;
 
-    public Accessories(String nome, String descricao, String foto, String type, String corporal_region) {
-        super(nome, descricao, foto);
+    public Accessories(String name, String description, String picture, String type, String corporal_region) {
+        super(name, description, picture);
         this.type = type;
         this.corporal_region = corporal_region;
     }
