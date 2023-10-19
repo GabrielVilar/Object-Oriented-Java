@@ -22,7 +22,7 @@ public class Clothe extends Luggage_Item{
         return "Clothe [min_temp=" + min_temp + ", water_resistence=" + water_resistence + "]";
     }
 
-    public void cadastra_roupa(){
+    public void register_clothes(){
     
     }   
 }
