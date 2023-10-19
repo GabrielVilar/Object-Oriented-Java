@@ -1,4 +1,4 @@
-public class Sapato extends Item_de_bagagem{
+public class Sapato extends Luggage_Item{
     
     private String tipo;
     private String cor;

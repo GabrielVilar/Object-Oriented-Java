@@ -1,4 +1,4 @@
-public class Accessories extends Item_de_bagagem{
+public class Accessories extends Luggage_Item{
 
     private String type;
     private String corporal_region;

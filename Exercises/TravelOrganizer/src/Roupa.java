@@ -1,4 +1,4 @@
-public class Roupa extends Item_de_bagagem{
+public class Roupa extends Luggage_Item{
     
     private double tenp_min;
     private boolean res_agua;
