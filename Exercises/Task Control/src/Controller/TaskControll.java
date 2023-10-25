@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import Model.Task;
 
-public class TaskDAO {
+public class TaskControll {
     
     public static void main(String[] args) {
         
