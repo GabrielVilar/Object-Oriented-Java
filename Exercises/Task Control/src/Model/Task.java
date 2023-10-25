@@ -14,6 +14,7 @@ public class Task {
     public String getName() {
         return name;
     }
+    
     public void setName(String name) {
         this.name = name;
     }
@@ -60,10 +61,11 @@ public class Task {
         this.completedPercentage = completedPercentage;
     }
 
+    Scanner sc = new Scanner(System.in);
+
     public void register(){
         
-        System.out.println("Let's register a task");
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Let's register a task");        
         System.out.println("Whats the name of the text? ");
         setName(sc.nextLine());
         System.out.println("Input a tesk description: ");
@@ -74,7 +76,8 @@ public class Task {
         setPriorityNumber(sc.nextFloat());
         System.out.println("How much of the task is completed in percentage? ");
         setCompletedPercentage(sc.nextFloat());
-        
+        sc.nextLine();
+
         if (getCompletedPercentage() == 100.0) {
             System.out.println("When did you finish the task? ");
             setCompletionDate(sc.nextLine());
@@ -85,16 +88,56 @@ public class Task {
 
     public void edit(){
 
+        System.out.println("Editing task: "+ getName());
+        System.out.println("Enter new task name (press Enter to keep the same): ");
+        String newName = sc.nextLine();
+        if(!newName.isEmpty()){
+            setName(newName);
+        }
+
+        System.out.println("Enter new task description (press Enter to keep the same): ");
+        String newDescription = sc.nextLine();
+        if (!newDescription.isEmpty()) {
+            setDescription(newDescription);
+        }
+
+        System.out.println("Enter new task deadline (press Enter to keep the same): ");
+        String newDeadLine = sc.nextLine();
+        if (!newDeadLine.isEmpty()) {
+            setDeadline(newDeadLine);
+        }
+
+        System.out.println("Enter new task priority (press Enter to keep the same): ");
+        String newPriority = sc.nextLine();
+        if (!newPriority.isEmpty()) {
+            setPriorityNumber(Float.parseFloat(newPriority));
+        }
+
+        System.out.println("Enter new task completed percentage (press Enter to keep the same): ");
+        String newPercentage = sc.nextLine();
+        if (!newPercentage.isEmpty()) {
+            setCompletedPercentage(Float.parseFloat(newPercentage));
+        }
+
+        if (getCompletedPercentage() == 100.0) {
+            System.out.println("Enter new task completion date (press Enter to keep the same): ");
+            String newCompletionDate = sc.nextLine();
+            if (!newCompletionDate.isEmpty()) {
+                setCompletionDate(newCompletionDate);
+            }
+        }
     }
 
     public String toString(){
-        return "Task Control"
+        return "-------------------------------"
+              +"\nTask Control"
               +"\nName of the task: "+getName()
               +"\nTask description: "+getDescription()
               +"\nTask deadline: "+getDeadline()
               +"\nTask priority: "+getPriorityNumber()
               +"\nTask completed percentage: "+getCompletedPercentage()
-              +"\nTask completion date: "+getCompletionDate()+"\n";
+              +"\nTask completion date: "+getCompletionDate()
+              +"\n";
     }
     
 }

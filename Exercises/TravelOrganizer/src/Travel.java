@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Travel {
     
     private String city;
@@ -41,12 +43,14 @@ public class Travel {
         this.max_temp = max_temp;
     }
 
+    public void registerTravel(){
+        city = (JOptionPane.showInputDialog("Input the first number: "));
+    }
+    public void editTravel(){}
+    
     @Override
     public String toString() {
         return "Travel [city=" + city + ", country=" + country + ", arrive_date=" + arrive_date + ", departure_date="
                 + departure_date + ", min_temp=" + min_temp + ", max_temp=" + max_temp + "]";
     }
-
-    public void registerTravel(){}
-    public void editTravel(){}
 }
