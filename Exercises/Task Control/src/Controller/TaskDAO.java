@@ -13,7 +13,6 @@ public class TaskDAO {
         int op;
         Scanner sc = new Scanner(System.in);
         ArrayList<Task> taskList = new ArrayList<>();
-        Task tsk = new Task();
 
         while (loop) {
             System.out.println("____________________________________\n"
@@ -31,8 +30,12 @@ public class TaskDAO {
                     taskList.add(newTask); // Adicione a nova instância à lista
                 break;
                 case 2:
-                    for (Task t : taskList) {
-                        System.out.println(t.toString());
+                    if(taskList.isEmpty()){
+                        System.out.println("There is no task here yet, pleas insert one!");
+                    }else{
+                        for (Task t : taskList) {
+                            System.out.println(t.toString());
+                        }
                     }
                     break;
                 case 3:
@@ -42,11 +45,21 @@ public class TaskDAO {
                         taskList.get(taskIndex).edit();
                     }else{
                         System.out.println("Invalid task index\nThis task does not exist!\n"
-                                           +"Maybe you inputted the wrong task index\n"
-                                           +"Remember that the first task has index equals to 0 and not 1 as usual");
+                                           +"Maybe you inputted the wrong task index.\n"
+                                           +"Remember that the first task has index equals to 0 and not 1 as usual.");
                     }
                     break;
                 case 4:
+                    System.out.println("Enter the index of the task you want to delete: ");
+                    int taskIndexDelete = sc.nextInt();
+                    if (taskIndexDelete >=0 && taskIndexDelete < taskList.size()) {
+                        taskList.remove(taskIndexDelete);
+                        System.out.println("Task deleted successfully!");
+                    }else{
+                        System.out.println("Invalid task index\nThis task does not exist!\n"
+                                           +"Maybe you inputted the wrong task index.\n"
+                                           +"Remember that the first task has index equals to 0 and not 1 as usual.");
+                    }
                     break;
                 case 5:
                     System.exit(0);

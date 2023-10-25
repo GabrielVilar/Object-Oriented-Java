@@ -82,7 +82,7 @@ public class Task {
             System.out.println("When did you finish the task? ");
             setCompletionDate(sc.nextLine());
         }else{
-            setCompletionDate("--");
+            setCompletionDate("The task is still going on");
         }
     }
 
@@ -107,7 +107,7 @@ public class Task {
             setDeadline(newDeadLine);
         }
 
-        System.out.println("Enter new task priority (press Enter to keep the same): ");
+        System.out.println("Enter new task priority in a scale of 1 to 10 (press Enter to keep the same): ");
         String newPriority = sc.nextLine();
         if (!newPriority.isEmpty()) {
             setPriorityNumber(Float.parseFloat(newPriority));
@@ -120,10 +120,18 @@ public class Task {
         }
 
         if (getCompletedPercentage() == 100.0) {
-            System.out.println("Enter new task completion date (press Enter to keep the same): ");
+            System.out.println("Enter new task completion date: ");
             String newCompletionDate = sc.nextLine();
             if (!newCompletionDate.isEmpty()) {
                 setCompletionDate(newCompletionDate);
+            }
+            while (newCompletionDate.isEmpty()) {
+                System.out.println("Pleas enter new task completion date: ");
+                newCompletionDate = sc.nextLine();
+                if (!newCompletionDate.isEmpty()) {
+                    setCompletionDate(newCompletionDate);
+                    break;
+                }
             }
         }
     }
