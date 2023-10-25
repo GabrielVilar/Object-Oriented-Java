@@ -120,19 +120,12 @@ public class Task {
         }
 
         if (getCompletedPercentage() == 100.0) {
-            System.out.println("Enter new task completion date: ");
-            String newCompletionDate = sc.nextLine();
-            if (!newCompletionDate.isEmpty()) {
-                setCompletionDate(newCompletionDate);
-            }
+            String newCompletionDate = "";
             while (newCompletionDate.isEmpty()) {
-                System.out.println("Pleas enter new task completion date: ");
+                System.out.println("Enter new task completion date: ");
                 newCompletionDate = sc.nextLine();
-                if (!newCompletionDate.isEmpty()) {
-                    setCompletionDate(newCompletionDate);
-                    break;
-                }
             }
+            setCompletionDate(newCompletionDate);
         }
     }
 
