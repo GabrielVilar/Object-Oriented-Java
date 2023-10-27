@@ -1,18 +1,8 @@
-## Getting Started
+## Scenery 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Rafaela has several children's party themes for rent. She needs to keep track of the rentals and for this she wants
+an application that allows her to register: the client's name and telephone number, the start and end time of the party.
+In addition, Rafaela offers discounts to some of her long-standing clients. Therefore, she needs to know how much
+actually charged for a given rental.
+For each theme, you need to keep track of the list of items that make up the theme (e.g. castle, Cinderella doll,
+witch, etc.), the rental price and the color of the tablecloth that should be used with the theme.
