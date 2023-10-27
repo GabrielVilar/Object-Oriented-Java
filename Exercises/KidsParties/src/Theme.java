@@ -2,7 +2,7 @@ public class Theme {
     
     private String item;
     private float value;
-    private String towel_color;
+    private String tablecloth_color;
     
     public String getItem() {
         return item;
@@ -10,8 +10,8 @@ public class Theme {
     public float getValue() {
         return value;
     }
-    public String getTowel_color() {
-        return towel_color;
+    public String getTablecloth_color() {
+        return tablecloth_color;
     }
 
     public void setItem(String item) {
@@ -20,16 +20,16 @@ public class Theme {
     public void setValue(float value) {
         this.value = value;
     }
-    public void setTowel_color(String towel_color) {
-        this.towel_color = towel_color;
+    public void setTablecloth_color(String tablecloth_color) {
+        this.tablecloth_color = tablecloth_color;
     }
 
     public Theme(){}
 
-    public Theme(String item, float value, String towel_color) {
+    public Theme(String item, float value, String tablecloth_color) {
         this.item = item;
         this.value = value;
-        this.towel_color = towel_color;
+        this.tablecloth_color = tablecloth_color;
     }
 
 }
