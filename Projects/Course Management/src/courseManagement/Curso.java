@@ -126,5 +126,14 @@ public class Curso {
             return false;
         }
     }
+
+    public String listarAlunosMatriculados(){
+        String saida = "****** Lista de Alunos Matriculados ******\n";
+        for(int i = 0; i < numAlunos; i++){
+            System.out.println(i);
+            saida = saida + "\n" + alunosMatriculados[i].getAluno().toString();
+        }
+        return saida;
+    }
     
 }
