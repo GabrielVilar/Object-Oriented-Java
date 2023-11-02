@@ -80,4 +80,10 @@ public class Main {
         }
     }
 
+    public static void swapListaAlunos(int a){
+        for (int i = a; i < d.getnAlunos() - 1; i++) {
+            d.setAluno(i, d.getAluno(i+1));
+        }
+    }
+
 }
