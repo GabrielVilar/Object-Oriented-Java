@@ -13,4 +13,10 @@ public class Dados {
     private Matricula[] matriculas;
     private int nMatriculas = 0;
 
+    public Dados(){
+        alunos = new Aluno[100];
+        professores = new Professor[50];
+        cursos = new Curso[50];
+    }
+
 }
