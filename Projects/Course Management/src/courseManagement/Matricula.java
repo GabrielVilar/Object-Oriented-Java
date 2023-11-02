@@ -7,4 +7,11 @@ public class Matricula {
     private double valorPago;
     private String turma;
 
+    public Matricula(Aluno aluno, String data, double valorPago, String turma) {
+        this.aluno = aluno;
+        this.data = data;
+        this.valorPago = valorPago;
+        this.turma = turma;
+    }
+
 }
