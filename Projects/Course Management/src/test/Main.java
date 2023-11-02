@@ -157,4 +157,13 @@ public class Main {
         }
     }
 
+    public static void editar(int i, Professor p){
+        if (i < d.getnProfs() && i >= 0) {
+            d.setProfessor(i, p);
+            System.out.println("Dados editados com sucesso");
+        }else{
+            System.out.println("Você escolheu um número inválido!");
+        }
+    }
+
 }
