@@ -13,5 +13,14 @@ public class Curso {
     private double valor;
     private Matricula[] alunosMatriculados = new Matricula[40];
     private int numAlunos;
+
+    public Curso(String nome, String conteudoProg, Professor professor, double valor) {
+        this.nome = nome;
+        this.conteudoProg = conteudoProg;
+        this.professor = professor;
+        this.valor = valor;
+        this.numAlunos = 0;
+    }
+
     
 }
