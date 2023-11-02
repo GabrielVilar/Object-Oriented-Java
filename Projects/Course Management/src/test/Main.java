@@ -12,7 +12,54 @@ public class Main {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        
+        int op = -1;
+        int aux;
+        d.preencherDados();
+        while (op != 0) {
+            System.out.println(imprimirMenu());
+            op = in.nextInt();
+            switch (op) {
+                case 0:
+                    System.out.println("Obrigado por utilizar o sistema. Até logo!");
+                    break;
+                case 1:
+                    cadastrarAluno();
+                    break;
+                case 2:
+                    removeAluno();
+                    break;
+                case 3:
+                    System.out.println("Escolha um dos alunos a seguir para editar as informacoes:\n");
+					listarAlunos();
+					aux = in.nextInt();
+					Aluno a = lerDadosAluno();
+					editar(aux, a);
+                    break;
+                case 4:
+                    listarAlunos();
+                    break;
+                case 5:
+                    cadastrarProfessor();
+                    break;
+                case 6:
+                    removerProfessor();
+                    break;
+                case 7:
+                    System.out.println("Escolha um dos professores a seguir para editar as informacoes:\n");
+					listarProfessores();
+					aux = in.nextInt();
+					Professor p = lerDadosProfessor();
+					editar(aux, p);
+                    break;
+                case 8:
+                    listarProfessores();
+                    break;        
+                default:
+                    System.out.println("\nOpcao Invalida!\n");
+                    break;
+            }
+        }
+        in.close();
     }
 
     public static String imprimirMenu(){
