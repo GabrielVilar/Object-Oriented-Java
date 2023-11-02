@@ -10,5 +10,26 @@ public class Aluno extends Pessoa{
         this.dataNasc = dataNasc;
         this.endereco = endereco;
     }
+
+    public String getDataNasc() {
+        return dataNasc;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setDataNasc(String dataNasc) {
+        this.dataNasc = dataNasc;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome;
+    }
     
 }
