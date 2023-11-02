@@ -29,6 +29,18 @@ public class Main {
         return saida;
     }
 
+    public static boolean cadastrarAluno(){
+        Aluno aln = lerDadosAluno();
+        if (d.getnAlunos() < 100) {
+            d.setAluno(d.getnAlunos(), aln);
+            d.setnAlunos(d.getnAlunos() + 1);
+            System.out.println("Aluno cadastrado com sucesso");
+            return true;
+        }else{
+            System.out.println("Não foi possível cadastrar o aluno!");
+            return false;
+        }
+    }
 
 
 }
