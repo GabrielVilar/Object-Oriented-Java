@@ -66,4 +66,18 @@ public class Main {
 		return aln;	
     }
 
+    public static void removeAluno(){
+        System.out.println("Escolha um dos alunos a seguir para ser removido:\n");
+        listarAlunos();
+        int i = in.nextInt();
+        if (i < d.getnAlunos() && i > 0) {
+            swapListaAlunos(i);
+            d.setAluno(d.getnAlunos(), null);
+            d.setnAlunos(d.getnAlunos() - 1);
+            System.out.println("Aluno removido com sucesso");
+        }else{
+            System.out.println("Você escolheu um perfil invalido!");
+        }
+    }
+
 }
