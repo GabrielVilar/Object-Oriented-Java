@@ -14,4 +14,41 @@ public abstract class Pessoa {
         this.numTel = numTel;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNumID() {
+        return numID;
+    }
+
+    public void setNumID(String numID) {
+        this.numID = numID;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getNumTel() {
+        return numTel;
+    }
+
+    public void setNumTel(String numTel) {
+        this.numTel = numTel;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa [nome=" + nome + ", numID=" + numID + ", cpf=" + cpf + ", numTel=" + numTel + "]";
+    } 
+
 }
