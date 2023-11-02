@@ -103,4 +103,17 @@ public class Main {
         new TelaListagem(d.getNomeAlunos());
     }
 
+    public static boolean cadastrarProfessor(){
+        Professor p = lerDadosProfessor();
+        if (d.getnProfs() < 100) {
+            d.setProfessor(d.getnProfs(), p);
+            d.setnAlunos(d.getnProfs() + 1);
+            System.out.println("Professor cadastrado com sucesso!");
+            return true;
+        }else{
+            System.out.println("Não foi possível cadastrar o professor\n");
+            return false;
+        }
+    }
+
 }
