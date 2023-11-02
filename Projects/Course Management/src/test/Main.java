@@ -42,5 +42,28 @@ public class Main {
         }
     }
 
+    public static Aluno lerDadosAluno(){
+        String nome;
+		String id; 
+		String cpf; 
+		String tel; 
+		String dtNascimento; 
+		String end;
+        in.nextLine(); //esvazia dados do teclado
+        System.out.println("Digite o nome do aluno: ");
+		nome = in.nextLine();
+		System.out.println("Digite o numero da identidade do aluno:");
+		id = in.nextLine();
+		System.out.println("Digite o cpf do aluno:");
+		cpf = in.nextLine();
+		System.out.println("Digite o telefone do aluno:");
+		tel = in.nextLine();
+		System.out.println("Digite a data de nascimento do aluno:");
+		dtNascimento = in.nextLine();
+		System.out.println("Digite o endereco do aluno:");
+		end = in.nextLine();
+		Aluno aln = new Aluno(nome, id, cpf, tel, dtNascimento, end);
+		return aln;	
+    }
 
 }
