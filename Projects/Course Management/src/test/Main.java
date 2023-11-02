@@ -151,4 +151,10 @@ public class Main {
         }    
     }
 
+    public static void swapListaProfessores(int p){
+        for (int i = 0; i < d.getnProfs() - 1; i++) {
+            d.setProfessor(i, d.getProfessor( + 1));
+        }
+    }
+
 }
