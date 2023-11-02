@@ -137,4 +137,18 @@ public class Main {
 		return p;
     }
 
+    public static void removerProfessor(){
+        System.out.println("Escolha um dos professores a seguir para ser removido:\n");
+        listarProfessores();
+        int i = in.nextInt();
+        if (i < d.getnProfs() && i > 0) {
+            swapListaProfessores(i);
+            d.setProfessor(d.getnProfs(), null);
+            d.setnProfs(d.getnProfs() - 1);
+            System.out.println("Professor removido com sucesso!");
+        }else{
+            System.out.println("Você escolheu um número inválido!");
+        }    
+    }
+
 }
