@@ -13,7 +13,7 @@ public class TelaListagem {
     JScrollPane jscrlp;
 
     public TelaListagem(String nomes[]){
-        JFrame jfrm = new JFrame("Listagem de Dados");
+        JFrame jfrm = new JFrame("Listagem de Dados:");
         jfrm.setLayout(new FlowLayout());
         jfrm.setSize(300, 300);  
 		jlst = new JList<String>(nomes); 
