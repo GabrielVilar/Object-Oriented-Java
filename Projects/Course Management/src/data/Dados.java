@@ -131,4 +131,18 @@ public class Dados {
         this.nMatriculas = nMatriculas;
     }
 
+    public void preencherDados(){
+        for(int i = 0; i < 10; i++){
+            String str = String.valueOf(i);
+            alunos[i] = new Aluno("Aluno".concat(str), "id".concat(str), "cpf".concat(str),
+            "telefone".concat(str), "dataNascimento".concat(str), "endereço".concat(str));
+            professores[i] = new Professor("Professor".concat(str), "id".concat(str), 
+            "cpf".concat(str), "telefone".concat(str), i);
+            cursos[i] = new Curso("Curso".concat(str), "Conteúdo".concat(str),
+            professores[i],i);
+            cursos[i].matricular(new Matricula(alunos[i], "hoje", i, "turma".concat(str)));            
+        }
+        nAlunos = nProfs = nCursos = 10;
+    }
+
 }
