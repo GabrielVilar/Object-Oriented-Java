@@ -116,5 +116,15 @@ public class Curso {
                 + horaInicio + ", horaTermino=" + horaTermino + ", cargaHorario=" + cargaHorario + ", conteudoProg="
                 + conteudoProg + ", professor=" + professor + ", valor=" + valor + ", numAlunos=" + numAlunos + "]";
     }
+
+    public boolean matricular(Matricula matri){
+        if (numAlunos < 40) {
+            alunosMatriculados[numAlunos] = matri;
+            numAlunos++;
+            return true;
+        }else{
+            return false;
+        }
+    }
     
 }
