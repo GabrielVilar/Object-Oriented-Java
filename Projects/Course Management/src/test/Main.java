@@ -15,7 +15,19 @@ public class Main {
         
     }
 
-
+    public static String imprimirMenu(){
+        String saida = new String("\nEscolha uma das opções a seguir:\n");
+        saida = saida + "0 - Sair da aplicação\n";
+        saida = saida + "1 - Cadastrar novo aluno\n";
+        saida = saida + "2 - Remover aluno existente\n";
+        saida = saida + "3 - Editar aluno existente\n";
+        saida = saida + "4 - Listar alunos\n";
+        saida = saida + "5 - Cadastrar novo professor\n";
+        saida = saida + "6 - Remover professor existente\n";
+        saida = saida + "7 - Editar professor existente\n";
+        saida = saida + "8 - Listar professores\n";
+        return saida;
+    }
 
 
 
