@@ -86,4 +86,13 @@ public class Main {
         }
     }
 
+    public static void editar(int i, Aluno a){
+        if (i < d.getnAlunos() && i >= 0) {
+            d.setAluno(i, a);
+            System.out.println("Dados editados com sucesso!");
+        }else{
+            System.out.println("Você escolheu um número inválido!");
+        }
+    }
+
 }
