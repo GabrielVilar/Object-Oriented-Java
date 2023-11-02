@@ -95,4 +95,12 @@ public class Main {
         }
     }
 
+    public static void listarAlunos(){
+        in.nextLine();
+        for (int i = 0; i < d.getnAlunos(); i++) {
+            System.out.println(i + " -> " + d.getAlunos()[i].toString());
+        }
+        new TelaListagem(d.getNomeAlunos());
+    }
+
 }
