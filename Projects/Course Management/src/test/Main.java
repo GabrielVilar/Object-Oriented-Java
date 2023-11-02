@@ -116,4 +116,25 @@ public class Main {
         }
     }
 
+    public static Professor lerDadosProfessor(){
+        String nome;
+		String id; 
+		String cpf; 
+		String tel; 
+		double valor;
+		in.nextLine(); //esvazia dados do teclado
+		System.out.println("Digite o nome do professor: ");
+		nome = in.nextLine();
+		System.out.println("Digite o numero da identidade do professor:");
+		id = in.nextLine();
+		System.out.println("Digite o cpf do professor:");
+		cpf = in.nextLine();
+		System.out.println("Digite o telefone do professor:");
+		tel = in.nextLine();
+		System.out.println("Digite o valor hora aula do professor:");
+		valor = in.nextDouble();
+		Professor p = new Professor(nome, id, cpf, tel, valor);
+		return p;
+    }
+
 }
