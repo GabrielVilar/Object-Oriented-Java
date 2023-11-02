@@ -166,4 +166,11 @@ public class Main {
         }
     }
 
+    public static void listarProfessores(){
+        for (int i = 0; i < d.getnProfs(); i++) {
+            System.out.println(i + " -> " + d.getProfessores()[i].toString());
+        }
+        new TelaListagem(d.getNomeProfessores());
+    }
+
 }
