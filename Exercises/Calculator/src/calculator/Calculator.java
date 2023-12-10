@@ -1,9 +1,15 @@
+package calculator;
 import java.text.DecimalFormat;
 
 import javax.swing.JOptionPane;
 
 public class Calculator {
-    float number01, number02, add, sub, div, mult;
+    private float number01;
+    private float number02;
+    private float add;
+    private float sub;
+    private float div;
+    private float mult;
 
     DecimalFormat df = new DecimalFormat();
     
@@ -54,5 +60,29 @@ public class Calculator {
         JOptionPane.showMessageDialog(null, "First number: "+df.format(number01)
         +"\nSecond number: "+df.format(number02)+"\nMult ("+df.format(number01)+") * ("+df.format(number02)+") = "+df.format(mult), "Calculator", 1);
     }
+
+    public float getNumber01() {
+        return number01;
+    }
+
+    public float getNumber02() {
+        return number02;
+    }
+
+    public float getAdd() {
+        return add;
+    }
+
+    public float getSub() {
+        return sub;
+    }
+
+    public float getDiv() {
+        return div;
+    }
+
+    public float getMult() {
+        return mult;
+    }    
 
 }
