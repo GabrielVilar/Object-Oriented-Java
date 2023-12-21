@@ -22,7 +22,7 @@ public class CalculatorView extends JFrame {
     public CalculatorView() {
 
         setTitle("Simple Calculator");
-        setSize(400, 300);
+        setSize(300, 220);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         calculator = new Calculator(0, 0, 0, 0, 0, 0);
