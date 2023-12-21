@@ -1,13 +1,13 @@
 package test;
 import javax.swing.JOptionPane;
 
-import calculator.Calculator;
+import calculator.SimpCalculator;
 public class TestCalculator {
     public static void main(String[] args) throws Exception {
         boolean loop = true;
         int op;
 
-        Calculator cal = new Calculator();
+        SimpCalculator cal = new SimpCalculator();
 
         while (loop) {
             op = Integer.parseInt(JOptionPane.showInputDialog(

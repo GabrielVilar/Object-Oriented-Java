@@ -3,7 +3,7 @@ import java.text.DecimalFormat;
 
 import javax.swing.JOptionPane;
 
-public class Calculator {
+public class SimpCalculator {
     private float number01;
     private float number02;
     private float add;
